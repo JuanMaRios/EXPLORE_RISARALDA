@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0 ; 
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../img/Turismo-Risaralda.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    
+    
+}
+@media (max-width: 768px) {
+    body {
+        background-image: url("../img/Turismo-Risaralda.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; 
+    }
+}
+
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #183139;
+    flex-wrap: wrap;
+}
+.enca a{
+    padding: 0 0 0 20px;
+    color: #91B49E;
+    padding: 0;
+    margin: 3px 0 0 20px; 
+    font-size: 48px;
+    overflow:hidden;
+    text-decoration: none;
+}
+.nav-list{
+    display:flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+.nav-list li a{
+    text-decoration: none;
+    color:rgb(255, 254, 254);
+    font-size:20px;
+    transition: transform 0.3s;
+}
+.nav-list li a:hover{
+    color:#91B49E;
+    transform: scale(1.1);
+}
+.abrir-menu,.cerrar-menu{
+    display: none;
+}
+@media screen and ( max-width: 904px){
+    .abrir-menu,.cerrar-menu {
+        display:block;
+        border:0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor:pointer;
+    }
+
+    .nav{
+        display:flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position:absolute;
+        top:0;
+        right: 0;
+        bottom:0;
+        background-color:#183139 ;
+        padding:2rem;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
+        opacity: 0;
+        visibility: hidden;
+        
+    }
+    .nav.visible{
+        opacity:1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav-list li a{
+        text-decoration: none;
+        color:rgb(238, 234, 234);
+    }
+}
+@media screen and (max-width:704px){
+    .enca{
+        font-size:30px;
+    }
+}
+
+.contacto {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; 
+    z-index: -99999;
+}
+
+.contacto h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.contacto p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto,
+.informacion-contacto {
+    display: flex;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left; 
+    background-color: rgba(250, 245, 245, 0.266);
+    transition: transform 0.3s;
+    padding:10px;
+    justify-content: center;
+}
+.formulario-contacto:hover,
+.informacion-contacto:hover{
+    transform: scale(1.1);
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contacto label,
+.formulario-contacto input,
+.formulario-contacto textarea,
+.formulario-contacto button {
+    margin-bottom: 10px;
+}
+
+.formulario-contacto button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+input{
+    border-radius: 5px;
+    height:30px;
+    border:none;
+    width: 350px;
+
+}
+
+
+@media (max-width: 600px) {
+    .contacto h2 {
+        font-size: 1.8em;
+    }
+
+    .contacto p {
+        font-size: 0.95em;
+    }
+
+    .formulario-contacto,
+    .informacion-contacto {
+        padding: 0 10px; 
+    }
+   
+}
+@media (max-width: 400px){
+    input{
+        width:300px;
+    }
+}
+.social{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+.social a {
+    text-decoration:none;
+    width: 65px;
+    height:65px;
+    border-radius:50%;
+    font-size: 30px;
+    border: 3px solid #f0f0f0;
+    color:#f0f0f0;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    cursor:pointer;
+    transition: all 0.5s ease;
+}
+.social a:hover:first-child{
+    color:#25d366;
+    border: 3px solid #25d366;
+    box-shadow: 0 0 25px #25d366;
+}
+.social a:hover:nth-child(2){
+    color:#1da1f2;
+    border: 3px solid #1da1f2;
+    box-shadow: 0 0 25px #1da1f2;
+}
+.social a:hover:nth-child(3){
+    color:#ee2a7b;
+    border: 3px solid #ee2a7b;
+    box-shadow: 0 0 25px #ee2a7b;
+}
+
+.footer {
+    width: 100%;
+    background: black;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+    position:fixed;
+    bottom:0
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; 
+        margin: 10px 0;
+    }
+
+    .informacion-contacto {
+        max-width: none; 
+    }
+}

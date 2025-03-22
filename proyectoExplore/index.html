@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paquetes</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/paquetes.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="enca"><a href="/inicio.html">ExploreRisaralda</a></h1>  
+        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+        <nav class="nav visible" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+              <li><a href="/inicio.html">Inicio</a></li>
+              <li><a href="inicio.html#titulo3">Nosotros</a></li>
+              <li><a href="inicio.html#contacto">Contacto</a></li>
+              <li><a href="/reserva.html">Reserva</a></li>
+              <li><a href="/login.html">Login</a></li>
+              <li><a href="/index.html">Paquetes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <section class="grid">
+        <div class="item item-0">
+          <div class="boton">
+            <button class="botonx">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <h1>Filtros de Paquete</h1>
+          <form>
+            <label class="label form-label" for="municipios">Municipios</label>
+            <select class="form-select" id="municipios">
+              <option>Seleccione un municipio</option>
+              <option>Pereira</option>
+              <option>Dosquebardas</option>
+              <option>Santa Rosa</option>
+              <option>Balboa</option>
+              <option>La Celia</option>
+              <option>La Virginia</option>
+              <option>Mistrato</option>
+              <option>Marsella</option>
+              <option>Quinchia</option>
+              <option>Santuario</option>
+              <option>Guatica</option>
+              <option>Pueblo Rico</option>
+              <option>Belen de Umbría</option>
+              <option>Apia</option>
+            </select>
+
+            <label class="label form-label" for="alimentacion"
+              >Alimentacion</label
+            >
+            <select class="form-select" id="alimentacion">
+              <option>Alimentacion</option>
+              <option>Desayuno</option>
+              <option>Almuerzo</option>
+              <option>Todas las comidas</option>
+            </select>
+
+            <label class="label form-label" for="numpersonas"
+              >Cantidad Personas</label
+            >
+            <select class="form-select" id="numpersonas">
+              <option>No. Personas</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+
+            <div class="form-check">
+              <label class="form-label-checkbox" for="alojamiento"
+                >Alojamiento:
+              </label>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="alojamiento"
+              />
+            </div>
+            <div class="form-check">
+              <label class="form-label-checkbox" for="transporte"
+                >Transporte:
+              </label>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="alojamiento"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="item item-1">
+          <div class="grid-paquetes">
+            <!--el grid dentro del principal -->
+            <div class="item-paquetes item-info desktop-only imagen_principal">
+              <h3>Santa Rosa Cabal</h3>
+            </div>
+            <div class="item-paquetes item-paquete-1">
+              <img src="img/chorros.jpg" alt="chorros de lolo" />
+              <div class="tarjeta-info">
+                <h6>PAQUETE</h6>
+                <h2>Santa Helena</h2>
+                <p>Hotel + Transporte + Alimentacion</p>
+                <hr />
+                <p>Precio por persona</p>
+                <div class="icono">
+                    <i class="bi bi-cart-fill"></i>
+                    <h3>$ 841.696</h3>
+                </div>
+              </div>
+            </div>
+            <div class="item-paquetes item-paquete-2">
+              <img src="/img/tambo.jpg" alt="tambo" />
+              <div class="tarjeta-info">
+                <h6>PAQUETE</h6>
+                <h2>Chorros de don Lolo</h2>
+                <p>Hotel + Transporte + Alimentacion</p>
+                <hr />
+                <p>Precio por persona</p>
+                <div class="icono">
+                    <i class="bi bi-cart-fill"></i>
+                    <h3>$ 841.696</h3>
+                </div>
+              </div>
+            </div>
+            <div class="item-paquetes item-paquete-3">
+              <img
+                src="/img/cascada-santa-helena.jpg"
+                alt="cascada santa helena"
+              />
+              <div class="tarjeta-info">
+                <h6>PAQUETE</h6>
+                <h2>Paquete a Termales</h2>
+                <p>Hotel + Transporte + Alimentacion</p>
+                <hr/>
+                <p>Precio por persona</p>
+                <div class="icono">
+                    <i class="bi bi-cart-fill"></i>
+                    <h3>$ 841.696</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"> 
+        &copy; ExploreRisaralda || 2025 todos los derechos reservados || Luisa      Fernanda Jimenez Coy - Sebastian Castellanos - Juan Manuel Rios 
+    </footer>
+    <script type="text/javascript"  src="/js/main.js"></script>
+  </body>
+</html>

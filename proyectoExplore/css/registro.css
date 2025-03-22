@@ -1,0 +1,220 @@
+body{
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(/img/chorros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    display:flex;
+    /* width: 100%; */
+    align-items: center; 
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #183139;
+    flex-wrap: wrap;
+    z-index: 999999;
+}
+
+.enca a{
+    padding: 0 0 0 20px;
+    color: #91B49E;
+    padding: 0;
+    margin: 3px 0 0 20px; 
+    font-size: 48px;
+    overflow:hidden;
+    text-decoration: none;
+}
+
+.nav-list{
+    display:flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color:white;
+    letter-spacing: 1px;
+    font-size:20px;
+    transition: transform 0.3s;
+}
+
+.nav-list li a:hover{
+    color:#91B49E;
+    transform: scale(1.1);
+}
+.abrir-menu,.cerrar-menu{
+    display: none;
+}
+
+
+
+@media screen and ( max-width: 904px){
+
+    .container-header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .abrir-menu,.cerrar-menu {
+        display: inline-block;
+        border:0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor:pointer;
+    }
+    .nav{
+        display:flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position:absolute;
+        top:0;
+        right: 0;
+        bottom:0;
+        background-color:#183139 ;
+        padding:2rem;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 999999;
+    }
+    .nav.visible{
+        opacity:1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav-list li a{
+        text-decoration: none;
+        color:whitesmoke;
+    }
+
+}
+@media screen and (max-width:704px){
+    .enca{
+        font-size:30px;
+    }
+}
+
+.container-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*centra los elementos hijos horizontalmente*/
+    width: 55%;
+    background-color:rgba(250, 245, 245, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    margin-top: 50px;
+}
+
+.container-login h1{
+    font-size: 25px;
+    text-align: center;
+    color: aliceblue;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px
+}
+
+.container-login input{
+    display: flex;
+    width: 70%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    background-color:rgba(250, 245, 245, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.container-login input:focus{
+    background-color: rgba(24, 49, 57,0.7);
+    backdrop-filter: blur(5px);
+    outline: none;
+    border: none;
+}
+
+.container-login input::placeholder{
+    color: aliceblue;
+}
+
+.container-login input:focus::placeholder{
+    color: aliceblue;
+}
+
+.container-login a{
+    color: aliceblue;
+}
+
+.boton-enviar{
+    width: 75%;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #183139;
+    background-color: #183139;
+    color: aliceblue;
+    letter-spacing: 1px;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.volver{
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+
+@media (min-width: 1024px) {
+    .container-login {
+        width: 30%; /* Ajusta el ancho del contenedor para pantallas grandes */
+    }
+
+    .container-login input {
+        width: 60%; /* Ajusta el ancho de los inputs para pantallas grandes */
+    }
+
+    button {
+        width: 65%; /* Ajusta el ancho del botón para pantallas grandes */
+    }
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.885);
+    color: #f4f4f4;
+    text-align: center;
+    padding:15px  30px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px 20px 10px 0px; /* Reduce el padding para pantallas pequeñas */
+        font-size: 0.9em; /* Ajusta el tamaño de la fuente si es necesario */
+    }
+}

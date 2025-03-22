@@ -1,0 +1,260 @@
+body  { 
+  /* background-color: #aeb899; */
+  background-color: white;
+  backdrop-filter: blur(2px);
+  margin: 0;
+  padding: 0;
+
+}
+
+
+/* HEADER */
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #183139;
+    flex-wrap: wrap;
+
+    /* z-index: 999999; */
+}
+
+.enca a{
+    padding: 0 0 0 20px;
+    color: #91B49E;
+    padding: 0;
+    margin: 3px 0 0 20px; 
+    font-size: 48px;
+    overflow:hidden;
+    text-decoration: none;
+}
+.nav-list{
+    display:flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+.nav-list li a{
+    text-decoration: none;
+    color:white;
+    letter-spacing: 1px;
+    font-size:20px;
+    transition: transform 0.3s;
+}
+
+.nav-list li a:hover{
+    color:#91B49E;
+    transform: scale(1.1);
+}
+.abrir-menu,.cerrar-menu{
+    display: none;
+}
+@media screen and ( max-width: 904px){
+    .abrir-menu,.cerrar-menu {
+        display:block;
+        border:0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor:pointer;
+    }
+    .nav{
+        display:flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position:absolute;
+        top:0;
+        right: 0;
+        bottom:0;
+        background-color:#183139 ;
+        padding:2rem;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 999999;
+    }
+    .nav.visible{
+        opacity:1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav-list li a{
+        text-decoration: none;
+        color:whitesmoke;
+    }
+
+}
+@media screen and (max-width:704px){
+    .enca{
+        font-size:30px;
+    }
+}
+
+/* LAYOUT */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+  margin: 10px;
+  
+}
+
+.item {
+    box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: black;
+  border-radius: 5px;
+  padding: 20px;
+  
+
+}
+
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.item-0 {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  height: 101%;
+  box-sizing: border-box;
+}
+
+.item-1 {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 2;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .mobile-only {
+    display: none;
+  }
+  .desktop-only {
+    display: block;
+  }
+
+  .item-0 {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+  }
+
+  .item-1 {
+    grid-column: 2 / span 3;
+    grid-row: 1 / span3;
+  }
+
+}
+
+/* FORMULARIO */
+
+.boton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.botonx {
+  border: none;
+  border-radius: 5px;
+  width: 2rem;
+  height: 2rem;
+}
+
+.botonx:hover {
+  background-color: crimson;
+}
+
+.form-select {
+  /* display: block; */
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color:rgba(23, 22, 22, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 0.375rem;
+  transition: border 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  height: 40px;
+  height: 100%;
+}
+
+.form-select:focus {
+  border: 2px solid rgba(17, 100, 71,.5);
+  outline: 0;
+  background-color: rgba(24, 49, 57,0.7);
+    backdrop-filter: blur(5px);
+    color: aliceblue;
+}
+
+.form-check {
+  display: block;
+  position: relative;
+  margin-bottom: 0.125rem;
+  margin-top: 1rem;
+}
+
+.form-check-input {
+  position: absolute;
+  margin-top: 0.2rem;
+  margin-left: 0.6em;
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.form-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.form-label-checkbox {
+  display: inline-block;
+}
+
+label.form-label {
+  margin-top: 1rem;
+}
+
+h1 {
+  display: inline-block;
+}
+
+/* FOOTER */
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.938);
+    color: #f4f4f4;
+    text-align: center;
+    padding:15px 30px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px 20px 10px 0px; /* Reduce el padding para pantallas pequeñas */
+        font-size: 0.9em; /* Ajusta el tamaño de la fuente si es necesario */
+    }
+}

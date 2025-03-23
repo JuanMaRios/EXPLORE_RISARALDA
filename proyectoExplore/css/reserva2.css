@@ -1,35 +1,41 @@
+/*-------------------------General--------------------------*/
 *{
-    
     padding: 0 ; 
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+/* ------------------------------Body--------------------------------*/
 
 body{
     align-items: center;
     justify-content: center;
-    background-color: #91B49E;
+    background-color: whitesmoke;
     margin: 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+/* ---------------------------------Header----------------------------------*/
 header{
     display:flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    background-color: #183139;
-    flex-wrap: wrap;
+    background-color: #2b4242;
+    height: 120px;
+    justify-content: center;
+    width: 100%;
+    
 }
 .enca a{
     padding: 0 0 0 20px;
-    color: #91B49E;
+    color: white;
     padding: 0;
     margin: 3px 0 0 20px; 
     font-size: 48px;
     overflow:hidden;
     text-decoration: none;
+    display: flex;
 }
 .nav-list{
     display:flex;
@@ -43,7 +49,7 @@ header{
     transition: transform 0.3s;
 }
 .nav-list li a:hover{
-    color:#91B49E;
+    color:gray;
     transform: scale(1.1);
 }
 .abrir-menu,.cerrar-menu{
@@ -67,7 +73,7 @@ header{
         top:0;
         right: 0;
         bottom:0;
-        background-color:#183139 ;
+        background-color:#183139;
         padding:2rem;
         box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
         opacity: 0;
@@ -92,72 +98,35 @@ header{
     }
 }
 
-
-
-/* header {
-    background-color: #183139;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-    border: 1px solid #D8E3C0;
-    box-shadow: 0 0 10px #9BD8DB;
-}
-h1{
-    color:#D8E3C0;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1em;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: transform 0.3s ;
-}
-nav ul li a:hover{
-    color: #91B49E ;
-    transform: scale(1.1);
-    text-decoration: underline;
-} */
-
 #titulo{
     text-align: center;
-    color: #ffffff;
-    text-shadow: 0 0 20px #183139;
+    color: white;
+    text-shadow: 0 0 10px green;
     
 }
 
+
+/* --------------Main------------------ */
 main{
     display: flex;
+    width: 100%;
+    
 }
 
-/* #planes,#reserva{
-    width: 90%;
-    height: auto;
-    margin: 10px 0;
-} */
 
+/* -----------------------------Calendar------------------------------------------- */
 #calendario{
     text-align: center;
-    width:300px;
-    width: 100%;
-    height: 40vh;
+    width:50%;
+    height: 60vh;
     padding: 20px;
-    box-shadow: 0 0 15px #91B49E;
-    border: 1px solid #D8E3C0;
+    box-shadow: 0 0 15px #183139;
+    border: 1px solid blue;
     border-radius: 20px;
     margin: 10px;
-    backdrop-filter: blur(5px);
     color: #000000;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: gainsboro;
    
 
 }
@@ -169,52 +138,63 @@ ol{
     cursor: pointer;
 
 }
-li{
+.day{
     text-align: right;
     height: 30px;
     cursor: pointer;
+    border: 1px solid black;
+    height: 50px;
+    
 
 }
 .primer-dia{
     grid-column-start: 5;
+    border: 1px solid black;
+    text-align: right;
 }
 
 .dia-nombre{
-    background:#eee;
+    background: #688e4e;
     font-weight: bold;
     text-align: center;
+    border: 1px solid black;
+    justify-content: center;
 }
-#cancel, #ok{
+#ok{
     text-align: end;
     margin: 5px;
-        
+    text-decoration: none;
+    color: green;
+    font-weight: 600;
+    width: 50px;
+    transition: 0.5s;
+    
 }
 
+#cancel{
+    text-align: end;
+    margin: 5px;
+    text-decoration: none;
+    color: red;
+    font-weight: 600;
+    transition: 0.5s;
+}
 
+#ok,#cancel:hover{
+    text-decoration: underline;
+}
 
 #texto2{
     margin-bottom: 5px;
 }
 
-img{
-    overflow: hidden;
-    width: 700px;
-    height: 350px;
-}
 
-#foto{
-    
-    height: auto;
-    display:flex;
-}
 @media screen and(max-width:650px){
     .foto{
         width:100px;
         height:100px; 
        }
 }
-
-
 
 #reserva{
     width: 300px;
@@ -224,7 +204,8 @@ img{
 
 .pack{
     width: 100%;
-    height: 40px;
+    height: 75px;
+    background-color: red;
 }
 
 /* Contenedor de la derecha parte de reservas*/

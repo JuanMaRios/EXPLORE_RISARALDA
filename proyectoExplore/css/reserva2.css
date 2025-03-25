@@ -9,7 +9,7 @@
 body{
     align-items: center;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color: #faf5e7;
     margin: 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,14 +22,14 @@ header{
     justify-content: space-between;
     padding: 2rem;
     background-color: #2b4242;
-    height: 120px;
-    justify-content: center;
+    height: 100px;
     width: 100%;
+    box-shadow: 0 0 15px #7bd172;
     
 }
 .enca a{
     padding: 0 0 0 20px;
-    color: white;
+    color: #7bd172;
     padding: 0;
     margin: 3px 0 0 20px; 
     font-size: 48px;
@@ -44,13 +44,15 @@ header{
 }
 .nav-list li a{
     text-decoration: none;
-    color:rgb(255, 255, 255);
+    /* color:rgb(255, 255, 255); */
+    color: #7bd172;
     font-size:20px;
     transition: transform 0.3s;
 }
 .nav-list li a:hover{
-    color:gray;
-    transform: scale(1.1);
+    color:white;
+    transform: scale(2.5);
+    text-decoration: underline;
 }
 .abrir-menu,.cerrar-menu{
     display: none;
@@ -100,9 +102,7 @@ header{
 
 #titulo{
     text-align: center;
-    color: white;
-    text-shadow: 0 0 10px green;
-    
+    color: black;
 }
 
 
@@ -113,23 +113,22 @@ main{
     
 }
 
-
 /* -----------------------------Calendar------------------------------------------- */
 #calendario{
     text-align: center;
     width:50%;
     height: 60vh;
     padding: 20px;
-    box-shadow: 0 0 15px #183139;
-    border: 1px solid blue;
+    box-shadow: 0 0 15px #2b4242;
+    border: 1px solid black;
     border-radius: 20px;
     margin: 10px;
     color: #000000;
     overflow: hidden;
-    background-color: gainsboro;
-   
+    background-color: white;
 
 }
+
 ol{
     list-style: none;
     display: grid;
@@ -144,9 +143,8 @@ ol{
     cursor: pointer;
     border: 1px solid black;
     height: 50px;
-    
-
 }
+
 .primer-dia{
     grid-column-start: 5;
     border: 1px solid black;
@@ -154,7 +152,7 @@ ol{
 }
 
 .dia-nombre{
-    background: #688e4e;
+    background: #91e0f1;
     font-weight: bold;
     text-align: center;
     border: 1px solid black;
@@ -168,7 +166,6 @@ ol{
     font-weight: 600;
     width: 50px;
     transition: 0.5s;
-    
 }
 
 #cancel{
@@ -180,85 +177,72 @@ ol{
     transition: 0.5s;
 }
 
-#ok,#cancel:hover{
+#ok:hover, #cancel:hover{
     text-decoration: underline;
 }
 
-#texto2{
-    margin-bottom: 5px;
-}
-
-
-@media screen and(max-width:650px){
-    .foto{
-        width:100px;
-        height:100px; 
-       }
-}
-
-#reserva{
-    width: 300px;
+/* -------------------------- Reserv of packs -------------------------------------*/
+#reserva{ /* ---------- Container with all packs -------------------*/
+    width: 50%;
     height: 40vh;
-
+    margin: 5px;
+    padding: 10px;
+    display: block;
 }
 
 .pack{
     width: 100%;
-    height: 75px;
-    background-color: red;
-}
-
-/* Contenedor de la derecha parte de reservas*/
-/* #reserva{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 70vh;
-    border: 1px solid #D8E3C0;
-    border-radius: 20px;
-    backdrop-filter: blur(5px);
-    margin: 5px;
-    flex-direction: column;
-    gap: 15px;
-    color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 0 15px #D8E3C0;
-    z-index: -999;
-    
-} */
-
-
-/* Texto interior del apartado de reservas*/
-/* #inicio{
-    width: 130px;
-    height: 40px;
-    border-radius: 5%;
-    background-color: #183139;
-    color: white;
-    border: 1px solid black;
-    box-shadow:0 0 15px #D8E3C0, 0 0 10px #9BD8DB;
-}
-#fin{
-    width: 130px;
-    height: 40px;
-    border-radius: 5%;
-    background-color: #183139;
-    color: white;
-    border: 1px solid black;
-    box-shadow:0 0 15px #D8E3C0, 0 0 10px #9BD8DB;
-}
-
-#agendar{
-    width: 90px;
-    height: 30px;
-    background-color: #A5AC5F;
-    color: black;
-    box-shadow:0 0 15px #D8E3C0, 0 0 10px #9BD8DB;
+    height: 120px;
+    background-color: white;
+    border-radius: 10px;
+    border:  0.5px solid black;
+    margin-top: 15px;
     cursor: pointer;
-} */
+}
 
-/* Pie de pagina */
+/*------------------------Efecto de cada paquete--------------------*/
+.pack:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #7bd172;
+}
+
+/*---------------------Interior de cada paquete-------------------*/
+#paquete1{
+    display: flex;
+}
+#paquete2{
+    display: flex;
+}
+#paquete3{
+    display: flex;
+}
+#paquete4{
+    display: flex;
+}
+#paquete5{
+    display: flex;
+}
+
+/*-----------------------Fotografia de destino---------------------------*/
+img{
+    width: 70px;
+    height: 100px;
+    margin: 10px;
+}
+
+/*---------------------Texto de cada paquete-------------------------*/
+#info{
+    display: block;
+    overflow: hidden;
+}
+
+/*---------------------Destino/Ciudad de cada paquete---------------*/
+#place{
+    font-weight: 600;
+    color: #457828;
+}
+
+/* ----------------------------- footer ------------------------- */
 .footer{
     position: fixed;
     bottom: 0;

@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #183139;
+  flex-wrap: wrap;
+  height: 50px;
+  align-content: center;
+
+  /* z-index: 999999; */
+}
+
+.enca a {
+  padding: 0 0 0 20px;
+  color: #91b49e;
+  padding: 0;
+  margin: 3px 0 0 20px;
+  font-size: 48px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #91b49e;
+  transform: scale(1.1);
+}
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+@media screen and (max-width: 904px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #183139;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999999;
+  }
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+  }
+  .nav-list li a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+}
+@media screen and (max-width: 704px) {
+  .enca {
+    font-size: 30px;
+  }
+}
+
+/* Menu lateral de filtros */
+
+:root {
+  --color-barra-lateral: rgb(255, 255, 255);
+  --color-texto: rgb(0, 0, 0);
+  --color-texto-menu: gray;
+  --color-boton: black;
+  --color-boton-texto: white;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+/* menu */
+.menu-lateral{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    cursor: pointer;
+    background-color: #91b49e;
+    color: var(--color-boton-texto);
+}
+
+.barra-lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  width: 250px;
+  height: 100%;
+  padding: 20px 15px;
+  /* background-color: var(--color-barra-lateral); */
+  background-color: gray;
+  transition: width 0.5s ease, left 0.5s ease;
+  overflow: hidden;
+}
+
+.mini-barra-lateral {
+  width: 80px;
+}
+
+/* nombre de la pagina */
+.barra-lateral .nombre-pagina {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.barra-lateral .nombre-pagina ion-icon {
+  min-width: 50px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.barra-lateral .nombre-pagina span {
+  font-size: 20px;
+  margin-left: 5px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.barra-lateral .nombre-pagina span.oculto {
+  opacity: 0;
+}
+
+/* MUNICIPIOS */
+
+.opciones{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.opciones::-webkit-scrollbar{
+    width: 5px;
+}
+
+.opciones::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 5px;
+}
+
+.barra-lateral .filtros{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center; 
+    margin-top: 10px;
+}
+
+.barra-lateral .filtros .label{
+    font-size: 20px;
+    margin-left: 5px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.barra-lateral .filtros .label.oculto{
+    opacity: 0;
+}
+
+.barra-lateral .filtros ion-icon{
+    min-width: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* input de municipios  */
+
+.input{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+select{
+    width: 95%;
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+}
+
+.barra-lateral .input .form-select.oculto{
+    display: none;
+    transition: 0.5s all ease;
+}
+
+.form-check-input {
+    position: relative;
+    margin-top: 0.2rem;
+    margin-left: 0.6em;
+    width: 2em;
+    height: 2em;
+    border-radius: 5px;
+    border: none;
+}
+
+.boton-filtrar{
+    width: 100%;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.oculto-boton{
+    display: none;
+}
+
+/* Responsive de menu lateral  */
+@media (max-height:660px){
+    .barra-lateral .nombre-pagina{
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width:600px){
+    .barra-lateral{
+        position: absolute;
+        left: -250px;
+    }
+    .max-barra-lateral{
+        left: 0;
+
+    }
+    .menu-lateral{
+        display: flex;
+    }
+    .menu-lateral ion-icon:nth-child(2){
+        display: none;
+    }
+}
+

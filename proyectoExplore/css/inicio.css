@@ -399,6 +399,82 @@ img{
     color: #000;
     box-shadow: 0 0 20px whitesmoke;
 }
+/* pantalla modal */
+.modal-container{
+    display:flex;
+    background-color: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 700px;
+    width: 100vw;
+}
+.modal{
+    background-color: #ffffff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.modal h1{
+    margin: 0;
+    color:black;
+
+}
+.modal p{
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+/* modal 2 */
+.modal-container2, .modal-container3,.modal-container4,.modal-container5,.modal-container6,.modal-container7, .modal-container8,.modal-container9,.modal-container10,.modal-container11,
+.modal-container12, .modal-container13,.modal-container14{
+    display:flex;
+    background-color: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 700px;
+    width: 100vw;
+}
+.modal2, .modal3,.modal4,.modal5,.modal6,.modal7, .modal8,.modal9,.modal10,.modal11,.modal12, .modal13,.modal14{
+    background-color: #ffffff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+}
+.modal2 h1,.modal3 h1,.modal4 h1,.modal5 h1,.modal6 h1,.modal7 h1, .modal8 h1 ,.modal9 h1,.modal10 h1,.modal11 h1,.modal12 h1, .modal13 h1,.modal14 h1{
+    margin: 0;
+    color: #000;
+}
+.modal2 p, .modal3 p,.modal4 p,.modal5 p,.modal6 p,.modal7 p, .modal8 p,.modal9 p,.modal10 p,.modal11 p,.modal12 p, .modal13 p,.modal14 p{
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+.show2, .show3,.show4,.show5,.show6,.show7, .show8,.show9,.show10,.show11,.show12, .show13,.show14{
+    pointer-events: auto;
+    opacity: 1;
+}
+
 
 /* section 3  Nosotros*/
 #titulo3 {

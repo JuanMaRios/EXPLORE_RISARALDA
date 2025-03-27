@@ -186,3 +186,22 @@ open14.addEventListener('click',() => {
 close14.addEventListener('click',() => {
     modal_container14.classList.remove('show14');
 });
+
+
+// slider de testimonios 
+const productContainer = [...document.querySelectorAll(".contenedor")];
+const nextBtn = [...document.querySelectorAll(".next-btn")];
+const preBtn = [...document.querySelectorAll(".pre-btn")];
+
+productContainer.forEach((item, i) => {
+  let dimensiones = item.getBoundingClientRect();
+  let cWidth = dimensiones.width;
+
+  nextBtn[i].addEventListener("click", () => {
+    item.scrollLeft += cWidth;
+  });
+
+  preBtn[i].addEventListener("click", () => {
+    item.scrollLeft -= cWidth;
+  });
+});
